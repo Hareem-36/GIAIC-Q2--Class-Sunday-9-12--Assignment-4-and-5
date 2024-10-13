@@ -1,0 +1,20 @@
+/* ImageContainer.module.css */
+
+.myContainer {
+    margin: 2rem 0;  /* Adjusts the top and bottom margin */
+    display: flex;    /* Centers the content */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+.imageWrapper {
+    width: 600px;    /* Default width */
+    height: 600px;   /* Default height */
+    position: relative; /* Ensures the child Image can fill the parent */
+}
+
+@media (max-width: 768px) {
+    .imageWrapper {
+        width: 100%;    /* Full width on smaller screens */
+        height: auto;   /* Adjust height automatically */
+    }
+}

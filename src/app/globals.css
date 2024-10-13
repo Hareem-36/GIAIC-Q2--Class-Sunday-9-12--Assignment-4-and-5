@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header{
+  background-color:darkolivegreen;
+  color:white;
+  font-weight: bold;
+  font-size: large;
+  padding: 20px;
+ 
+}
+.header-buttons{
+
+display:flex;
+justify-content: center;
+align-items: left;
+gap: 30px;
+}
+.footer {
+  background-color:darkblue;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+align-items: left;
+gap: 30px;
+@media (max-width: 400px) {
+   
+  background-color: lightcoral; 
+  padding:30px;
+
+ 
+  
+  
+}
+}
+
+.social-media-icons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.social-media-icons a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  
+  gap: 70px;
+}
+
+.social-media-icons a:hover {
+  color: #0077b5; /* Hover color for LinkedIn-style */
+  transition: color 0.3s ease;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  
+}
+/* globals.css */
+body {
+  background-color: #F5F7F8;
+  background-image: url('/path/to/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: var(--font-geist-sans); /* Optional: apply font globally */
+  
+  
+  }
+
+.historical-info {
+  background-color: #F3E5AB; /* Sandy Beige background */
+  border: 1px solid #0B3D91; /* Indigo Blue border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the box */
+  margin: 20px auto; /* Center the div with margin */
+  max-width: 800px; /* Maximum width for better readability */
+}
+
+.p {
+  font-family: 'Arial', sans-serif; /* Font family */
+  color: #4B5320; /* Olive Green text color */
+  font-size: 20px; /* Font size */
+  line-height: 2.0; /* Line height for better readability */
+  text-align: justify; /* Justify the text */
+}
+/* Parent container: flex layout for responsiveness */
+.parentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual child containers */
+.childContainer {
+  background-color: #f8f9fa; /* Light gray background */
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+  @media (max-width: 400px) {
+    background-color: lightgrey;
+   color:#0B2F9F;
+   
+  }
+  
+}
+@media (max-width: 400px) {
+  .parentContainer {
+      flex-direction: column;    /* Stack children vertically */
+      align-items: center;       /* Center items vertically */
+  }
+}
+.childContainer:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Image container styling */
+.imageContainer {
+  width: 100%;
+  height: 180px;
+  background-color: #dfe4ea; /* Placeholder gray background */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+ 
+   
+}
+
+/* Title styling */
+.title {
+  font-size: 1.5rem;
+  color: #229799;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Description styling */
+.description {
+  color: #2f3640;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  @media (max-width: 400px) {
+    background-color: lightgrey;
+   color:#0B2F9F;
+   
+  }
+  @media (max-width: 600px) {
+    background-color: lightblue;
+   color:darkblue;
+   font-weight: bold;
+}
+}
+/* Read more button styling */
+.readMore {
+  background-color: #0b2f9f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.readMore:hover {
+  background-color: #1b73e8;
+  
+}
+
+/* Bounce-in-right animation */
+@keyframes bounceInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  60% {
+      opacity: 1;
+      transform: translateX(-10%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes flip-scale-2-hor-top {
+  0% {
+      transform: scale(1) rotateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0.5) rotateX(90deg);
+      opacity: 0;
+  }
+}
+
+@keyframes flip-2-ver-right-fwd {
+  0% {
+      transform: rotateY(0);
+      transform-origin: right;
+      opacity: 1;
+  }
+  100% {
+      transform: rotateY(180deg);
+      transform-origin: right;
+      opacity: 0;
+  }
+}
+
+.flip-2-ver-right-fwd {
+  animation: flip-2-ver-right-fwd 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes bounce-in-left {
+  0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+  }
+  60% {
+      transform: translateX(30px);
+      opacity: 1;
+  }
+  80% {
+      transform: translateX(-10px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.bounce-in-left {
+  animation: bounce-in-left 5s ease-out both;
+}
+
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Set height according to design */
+}
+.imageContainer {
+  width: 100%; /* Set width as needed */
+  height: 200px; /* Set height as needed */
+  background-image: url('/app/images/bb1.jpg');
+  background-size: cover; /* Adjusts to cover the entire container */
+  background-position: center; /* Centers the image */
+
+ 
+
+}
+.childContainer:hover .title {
+  color: #229799; /* Change title color on hover */
+}
+
+.childContainer:hover .description {
+  color: #0B2F9F; /* Change description color on hover */
+}
+
+.childContainer .imageContainer img {
+  transition: transform 0.3s ease;
+}
+
+.childContainer:hover .imageContainer img {
+  transform: scale(1.1); /* Slightly zoom the image on hover */
+}
+/* Header.css */
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.header {
+  background-color: #229799; /* Header background color */
+  padding: 10px;
+}
+
+.header-buttons {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.menu-item {
+  animation: slideIn 0.5s ease forwards; /* Default animation for menu items */
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.menu-item:hover {
+  color: #0B2F9F; /* Change color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-item {
+      animation: slideIn 0.8s ease forwards;
+      background-color: lightcyan;
+      color:#0b2f9f
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+      animation: slideIn 1s ease forwards; 
+      background-color: lightgray;
+      color:#0b2f9f
+      
+  }
+}
+/* Home.css */
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Styles for home-container */
+.home-container {
+  padding: 20px; /* Add padding */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Content styles with animation */
+.content {
+  animation: fadeInUp 1s ease forwards; /* Apply animation */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content h3 {
+      font-size: 60px; /* Smaller font size on medium screens */
+      color:#229799
+  }
+
+  .content h3 span {
+      font-size: 50px; /* Smaller font size for the span */
+  }
+}
+
+@media (max-width: 480px) {
+  .content h3 {
+      font-size: 30px; /* Smaller font size on small screens */
+  }
+
+  .content h3 span {
+      font-size: 50px; /* Adjust the span font size */
+  }
+}
+.my-8 flex justify-center{
+  @media (max-width: 480px) {
+    width:300px;
+    height:300px;
+    position: relative;
+    }
+}
